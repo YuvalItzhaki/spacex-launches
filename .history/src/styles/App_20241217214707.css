@@ -132,7 +132,6 @@
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-
 .launch-cell-details h1{
   color: #2c291b;
 }
@@ -210,23 +209,6 @@
   .sort-container {
     width: 100%;
   }
-
-  .launch-grid {
-    grid-template-columns: 1fr; /* Make grid one column on mobile */
-  }
-
-  .launch-cell {
-    padding: 10px;
-  }
-
-  .pagination {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .pagination button {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-  }
 }
+
+

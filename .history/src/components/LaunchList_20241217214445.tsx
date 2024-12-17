@@ -11,7 +11,7 @@ const LaunchList: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [launchesPerPage] = useState<number>(6); // Limit launches per page
+  const [launchesPerPage] = useState<number>(4); // Limit launches per page
   const [sortCriteria, setSortCriteria] = useState<string>("date");
 
   useEffect(() => {

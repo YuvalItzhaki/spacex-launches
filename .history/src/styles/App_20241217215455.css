@@ -1,0 +1,85 @@
+.launch-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Mobile adjustment */
+@media (max-width: 600px) {
+  .launch-grid {
+    grid-template-columns: 1fr; /* Display launches in a single column */
+    gap: 15px; /* Reduce gap between cards */
+  }
+
+  /* Search and Sort section */
+  .search-sort-container {
+    flex-direction: column; /* Stack input and dropdown vertically */
+    align-items: flex-start;
+  }
+
+  .search-input,
+  .sort-container {
+    width: 100%; /* Ensure inputs take full width */
+  }
+
+  .pagination {
+    flex-direction: column; /* Stack pagination buttons vertically */
+    gap: 10px;
+    align-items: center;
+  }
+
+  .pagination button {
+    padding: 10px 20px;
+    font-size: 1rem; /* Slightly smaller buttons */
+  }
+
+  /* Adjust font size and spacing for mobile */
+  .launch-cell h2 {
+    font-size: 1.25em; /* Slightly smaller titles */
+    margin: 10px 0;
+  }
+
+  .launch-cell p {
+    font-size: 0.9em; /* Adjust text size */
+  }
+
+  /* Style adjustments for the search input */
+  .search-input {
+    max-width: 100%; /* Ensure full width on mobile */
+  }
+
+  .sort-dropdown {
+    width: 100%; /* Make dropdown full width */
+  }
+
+  /* Adjust pagination button size */
+  .pagination button {
+    padding: 8px 15px;
+    font-size: 0.9rem; /* Smaller buttons for mobile */
+  }
+}
+
+/* Optionally, improve appearance of search input and dropdown on smaller screens */
+.search-input, .sort-dropdown {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.sort-dropdown {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.launch-cell {
+  text-align: left; /* Align content left for better readability on mobile */
+}
+
+.launch-cell-details h1 {
+  font-size: 1.2em;
+}
+
