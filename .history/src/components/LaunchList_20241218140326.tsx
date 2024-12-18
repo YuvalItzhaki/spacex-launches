@@ -122,6 +122,7 @@ const LaunchList: React.FC = () => {
       </div>
     </div>
   );
+  
 };
 
 export default LaunchList;

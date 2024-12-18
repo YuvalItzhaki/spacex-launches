@@ -13,7 +13,7 @@ const LaunchList: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState<number>(parseInt(page || "1", 10)); // Default to page 1
-  const [launchesPerPage] = useState<number>(9); // Limit launches per page
+  const [launchesPerPage] = useState<number>(6); // Limit launches per page
   const [sortCriteria, setSortCriteria] = useState<string>("date");
 
   useEffect(() => {
@@ -66,8 +66,8 @@ const LaunchList: React.FC = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="launch-list-container">
-      <div className="search-sort-container">
+    <div className="search-sort-container">
+      <div>
         <input
           type="text"
           placeholder="Search by mission name"
@@ -75,6 +75,7 @@ const LaunchList: React.FC = () => {
           onChange={(e) => setSearch(e.target.value)}
           className="search-input"
         />
+        
         <div>
           <label htmlFor="sort">Sort By: </label>
           <select
@@ -89,7 +90,7 @@ const LaunchList: React.FC = () => {
           </select>
         </div>
       </div>
-  
+
       <div className="launch-grid">
         {filteredLaunches.map((launch) => (
           <div className="launch-cell" key={launch.id}>
@@ -102,7 +103,7 @@ const LaunchList: React.FC = () => {
           </div>
         ))}
       </div>
-  
+
       <div className="pagination">
         <button
           onClick={() => handlePageChange(currentPage - 1)}
