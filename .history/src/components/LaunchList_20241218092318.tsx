@@ -5,8 +5,12 @@ import { Launch } from "../types/spacex";
 import { format } from "date-fns";
 import "../styles/App.css";
 
+interface RouteParams {
+  page?: string;
+}
+
 const LaunchList: React.FC = () => {
-  const { page } = useParams<{ page?: string }>(); // Use inline type for params
+  const { page } = useParams<RouteParams>(); // Retrieve page number from URL
   const navigate = useNavigate(); // Use navigate for programmatic routing
   const [launches, setLaunches] = useState<Launch[]>([]);
   const [loading, setLoading] = useState(true);

@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import { getLaunches } from "../services/spacexApi";
 import { Launch } from "../types/spacex";
 import { format } from "date-fns";
 import "../styles/App.css";
 
+interface RouteParams {
+  page?: string;
+}
+
 const LaunchList: React.FC = () => {
-  const { page } = useParams<{ page?: string }>(); // Use inline type for params
-  const navigate = useNavigate(); // Use navigate for programmatic routing
+  const { page } = useParams<RouteParams>(); // Retrieve page number from URL
+  const history = useHistory();
   const [launches, setLaunches] = useState<Launch[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -58,7 +62,7 @@ const LaunchList: React.FC = () => {
   const handlePageChange = (pageNumber: number) => {
     if (pageNumber >= 1 && pageNumber <= totalPages) {
       setCurrentPage(pageNumber);
-      navigate(`/launches/${pageNumber}`); // Update the URL with the new page number
+      history.push(`/launches/${pageNumber}`); // Update the URL with the new page number
     }
   };
 
