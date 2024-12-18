@@ -46,7 +46,7 @@ const LaunchList: React.FC = () => {
     launch.name.toLowerCase().includes(search.toLowerCase())
   );
 
-  const totalPages = Math.ceil(launches.length / launchesPerPage);
+  const totalPages = Math.ceil(launches.length / launchesPerPage); // Total pages calculation
 
   const handlePageChange = (pageNumber: number) => {
     if (pageNumber >= 1 && pageNumber <= totalPages) {
