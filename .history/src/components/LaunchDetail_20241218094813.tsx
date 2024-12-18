@@ -49,12 +49,13 @@ const LaunchDetail: React.FC = () => {
           <img src={launch.links.patch.small} alt={`${launch.name} patch`} />
         )}
         {launch.links.webcast && (
+          
           <div>
             <p>
-              <a href={launch.links.webcast} target="_blank" rel="noopener noreferrer">
-                Watch in New Tab
-              </a>
-            </p>
+      <a href={launch.links.webcast} target="_blank" rel="noopener noreferrer">
+        Watch in New Tab
+      </a>
+    </p>
             <h3>Watch the Launch</h3>
             <div className="video-container">
               <iframe

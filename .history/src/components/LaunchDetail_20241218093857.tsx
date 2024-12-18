@@ -50,24 +50,18 @@ const LaunchDetail: React.FC = () => {
         )}
         {launch.links.webcast && (
           <div>
-            <p>
-              <a href={launch.links.webcast} target="_blank" rel="noopener noreferrer">
-                Watch in New Tab
-              </a>
-            </p>
             <h3>Watch the Launch</h3>
-            <div className="video-container">
-              <iframe
-                src={launch.links.webcast.replace("watch?v=", "embed/")}
-                title="Launch Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
+            <iframe
+              width="560"
+              height="315"
+              src={launch.links.webcast.replace("watch?v=", "embed/")}
+              title="Launch Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </div>
         )}
-
 
         </div>
     </div>

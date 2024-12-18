@@ -199,22 +199,6 @@
   gap: 20px;
   /* border-radius: 20px; */
 }
-.video-container {
-  position: relative;
-  width: 100%; /* Full width */
-  padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width = 9/16 = 0.5625) */
-  margin: 1rem 0; /* Optional spacing */
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  border: 0; /* Remove default border */
-}
-
 
 @media (max-width: 600px) {
   .search-sort-container {
@@ -244,5 +228,8 @@
     width: 100%;
     padding: 10px;
     margin: 5px 0;
+  }
+  .video-container {
+    padding-bottom: 75%; /* Example for mobile-friendly aspect ratio */
   }
 }

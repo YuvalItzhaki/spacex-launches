@@ -50,11 +50,6 @@ const LaunchDetail: React.FC = () => {
         )}
         {launch.links.webcast && (
           <div>
-            <p>
-              <a href={launch.links.webcast} target="_blank" rel="noopener noreferrer">
-                Watch in New Tab
-              </a>
-            </p>
             <h3>Watch the Launch</h3>
             <div className="video-container">
               <iframe
@@ -64,6 +59,11 @@ const LaunchDetail: React.FC = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
+              <p>
+      <a href={launch.links.webcast} target="_blank" rel="noopener noreferrer">
+        Watch in New Tab
+      </a>
+    </p>
             </div>
           </div>
         )}
